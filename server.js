@@ -1,15 +1,23 @@
 const express = require('express');
 const app = express();
 
-const studentRouter = require('./router/students');
-const courseRouter=require('./router/course');
+const usersRouter = require('./router/user');
+const productsRouter=require('./router/product');
+
+const cartRouter=require('./router/cart');
 
 app.use(express.json());
 
-// Mount router
-app.use('/students', studentRouter);
+app.get('/',(req,res)=>{
+    res.send('welcome')
+})
 
-app.use('/course',courseRouter);
+// Mount router
+app.use('/users', usersRouter);
+
+app.use('/products',productsRouter);
+
+app.use('/cart',cartRouter)
 
 app.listen(4000, () => {
     console.log('server is running');
