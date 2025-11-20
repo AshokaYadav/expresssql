@@ -1,17 +1,15 @@
 const express = require('express');
 const app = express();
 
-// IMPORTANT: Body ko read karne ke liye middleware
+const studentRouter = require('./router/students');
+const courseRouter=require('./router/course');
+
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Here is the list of books');
-});
+// Mount router
+app.use('/students', studentRouter);
 
-app.post('/', (req, res) => {
-    console.log(req.body); // <-- req.body (not res.body)
-    res.send('Books submitted successfully');
-});
+app.use('/course',courseRouter);
 
 app.listen(4000, () => {
     console.log('server is running');
