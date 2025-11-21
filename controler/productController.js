@@ -1,11 +1,14 @@
+const ProuductServices=require('../services/productService')
+
 exports.getAllProducts =(req,res)=>{
-    res.send('fetching all producst');
+    console.log('hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii')
+    res.send(ProuductServices.getAllProductsService());
 }
 
 exports.addAllProducts=(req,res)=>{
-    res.send('adding new producst');
+    res.send(ProuductServices.getProductsWithId());
 }
 
 exports.getProductswithId=(req,res)=>{
-    res.send('fetcgin producst with id');
+    res.send(ProuductServices.addProductServices());
 }
