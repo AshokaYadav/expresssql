@@ -1,5 +1,8 @@
-exports.getAllProductsService=()=>{
-    return 'fetching all products';
+const path = require('path');
+
+exports.getAllProductsService = () => {
+    // Service should return path, not res
+    return path.join(__dirname, '..', 'Views', 'products.html');
 };
 
 

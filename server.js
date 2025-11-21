@@ -6,6 +6,8 @@ const productsRouter=require('./router/product');
 
 const cartRouter=require('./router/cart');
 
+const path = require('path'); // Required to serve HTML file
+
 app.use(express.json());
 
 app.get('/',(req,res)=>{
