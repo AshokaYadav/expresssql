@@ -11,6 +11,6 @@ exports.getProductsWithId=(id)=>{
 };
 
 
-exports.addProductServices=()=>{
-    return `products added successfully`;
+exports.addProductServices=(data)=>{
+    return {message:'added successfully',data};
 };

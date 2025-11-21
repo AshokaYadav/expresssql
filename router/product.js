@@ -5,8 +5,8 @@ const productController=require('../controler/productController')
 
 router.get('/',productController.getAllProducts)
 
-router.post('/',productController.addAllProducts)
+router.post('/',productController.addProductswithId)
 
-router.get('/:id',productController.getProductswithId)  
+router.get('/:id',productController.addProductswithId)  
 
 module.exports=router;
