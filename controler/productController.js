@@ -1,7 +1,7 @@
 const ProuductServices=require('../services/productService')
 
 exports.getAllProducts =(req,res)=>{
-    console.log('hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii')
+    console.log('hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
     const filePath = ProuductServices.getAllProductsService();
     res.sendFile(filePath);
 }
